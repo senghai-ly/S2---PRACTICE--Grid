@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" >
+</head>
+<body>
+  <header>
+    <h1>Dashboard</h1>
+    <div class="user-info">
+      <i class="fa fa-search" aria-hidden="true"></i>
+      <i class="fa-solid fa-user"></i>
+      <span>SENGHAI LY</span>
+    </div>
+  </header>
+
+  <nav class="sidebar">
+    <div class="menu-item">
+      <i class="fa-solid fa-house"></i>
+      <span>Dashboard</span>
+    </div>
+    <div class="menu-item">
+      <i class="fa-solid fa-book"></i>
+      <span>Courses</span>
+    </div>
+    <div class="menu-item">
+      <i class="fa-solid fa-calendar"></i>
+      <span>Schedule</span>
+    </div>
+    <div class="menu-item">
+      <i class="fa-solid fa-trophy"></i>
+      <span>Achievements</span>
+    </div>
+    <div class="menu-item">
+      <i class="fa-solid fa-chart-line"></i>
+      <span>Progress</span>
+    </div>
+    <div class="menu-item setting">
+      <i class="fa-solid fa-cogs"></i>
+      <span>Settings</span>
+    </div>
+  </nav>
+  
+  <main class="main">
+    <div class="card welcome">
+      <h2>Welcome back, SENGHAI!</h2>
+      <div class="overview">
+        <p>Here's an overview of your learning progress:</p>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>  
+        <p>70% of your courses completed!</p>
+      </div>
+    </div>
+    <div class="card">
+      <h2><i class="fa-solid fa-book-open"></i> Current Course</h2>
+      <div class="text">
+        <p><i class="fa-solid fa-circle"></i> Web Development Fundamentals</p>
+        <p><i class="fa-solid fa-circle"></i> Lesson 7/10</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><i class="fa-solid fa-calendar-check"></i> Upcoming Deadlines</h2>
+      <div class="text">
+        <p><i class="fa-solid fa-circle"></i>Project Submission - 3 days left</p>
+        <p><i class="fa-solid fa-circle"></i>Quiz - JavaScript Basics - 1 week left</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><i class="fa-solid fa-fire"></i> Study Streak</h2>
+      <img src="streak.png">
+      <div class="text">You are on fired. Keep it up!</div>
+    </div>
+
+    <div class="card">
+      <h2><i class="fa-solid fa-road"></i> Learning Path</h2>
+      <ul>
+        <li><input type="checkbox"> Design Principles</li>
+        <li><input type="checkbox">HTML Basics</li>
+        <li><input type="checkbox">CSS Basics</li>
+        <li><input type="checkbox">CSS Flex</li>
+        <li><input type="checkbox">CSS GRID</li>
+        <li><input type="checkbox">Mid Term</li>
+        <li><input type="checkbox">Project</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><i class="fa-solid fa-clock"></i>Learning Period</h2>
+      <div class="hours"><img src="weeklyhours.png"></div>
+      <div class="text">14 hours  per weeks. Not bad.</div>
+    </div>
+    <div class="card">
+      <h2><i class="fa-solid fa-clipboard-list"></i> To-Do List</h2>      
+      <ul>
+        <li><input type="checkbox"> Practice HTMl for 1 hour</li>
+        <li><input type="checkbox"> Watch a CSS tutorial</li>
+        <li><input type="checkbox"> Finish Assignment</li>
+        <li><input type="checkbox"> Review HTML/CSS concepts</li>
+        <li><input type="checkbox"> Clean room</li>
+      </ul>
+      <input type="text" id="new-task" placeholder="Add a new task...">
+    </div>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    display: grid;
+    grid-template-columns:200px 1fr;
+    grid-template-areas: 
+    "header header"
+    "sidebar main";
+    min-height: 100vh;
+    grid-template-rows: 60px 1fr;
+}
+header{
+    grid-area: header;
+    color:white;
+    background-color: rgb(19, 157, 203);
+    padding: 10px;
+    top: 0;
+    position: sticky;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+h1 {
+    padding-left: 17px;
+}
+.user-info {
+    margin-left: auto;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: rgb(22, 114, 145);
+    position: sticky;
+    top: 60px;
+    height: calc(100vh - 60px);
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar .menu-item {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items:center;
+    gap: 15px;
+    font-size: 20px;
+    justify-content:flex-start;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.sidebar .menu-item:hover {
+    background-color: #00509e;
+}
+.sidebar .menu-item:active {
+    opacity: 0.7;
+}
+.sidebar .menu-item.setting {
+    margin-top: auto; 
+}
+
+.main {
+    grid-area: main;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: rgb(202, 213, 223);
+}
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.welcome {
+    grid-column: span 3;
+}
+.card .overview {
+    padding-top: 15px;
+    font-size: 20px;
+}
+.card .overview p {
+    margin: 15px 0;
+}
+.progress-bar {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    height: 20px;
+    margin-top: 10px;
+}
+.progress {
+    background-color: #2ab51d;
+    height: 100%;
+    border-radius: 10px;
+    width: 70%; 
+}
+.card .text {
+    font-size: 20px;
+    padding-top: 10px;
+}
+.card .text p {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 50px;
+    padding-top: 10px;
+}
+.card .text p i {
+    color: #3498db; 
+    font-size: 0.6rem; 
+}
+.card img {
+    width:120px;
+    height: 60%;
+    margin-left: 20px;
+}
+.hours img {
+    height: 80%;
+    width: 90%;
+  }
+.card ul {
+    list-style-type: none;
+    padding-top: 10px;
+}
+  
+.card ul li {
+  margin: 10px 0;
+  font-size:20px ;
+  display: flex;
+  align-items: center;
+}
+
+.card ul li input[type="checkbox"] {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  accent-color: #4CAF50;
+  cursor: pointer;  
+}
+
+.card ul li input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: green; 
+}
+#new-task {
+    width: 80%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+#new-task::placeholder {
+    color: #1a1716;
+}
+h2 i {
+    color: blue;
+}
+  
+@media (max-width: 770px) {
+    body {
+      grid-template-columns:1fr;
+      grid-template-areas: 
+        "header"
+        "main";
+    }
+    .sidebar {
+        display: none;
+    }
+    .main {
+      grid-template-columns: 1fr;
+      font-size: 15px;
+    }
+    .card {
+        grid-column: span 1 !important;
+    }
+    .card .text {
+        font-size: 15px;
+        padding-top: 8px;
+    }
+    .card ul li {
+        font-size:15px;
+    }
+    .card ul li input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+    }
+}
